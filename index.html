@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS5 Browse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PS5 Browse</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="urlInput" placeholder="Enter URL (e.g., https://www.example.com)">
+            <button onclick="goToURL()">Go!</button>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search the web (e.g., cats, news)">
+            <select id="searchEngine">
+                <option value="https://www.google.com/search?q=">Google</option>
+                <option value="https://www.bing.com/search?q=">Bing</option>
+                <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+                <option value="https://www.youtube.com/results?search_query=">YouTube</option>
+            </select>
+            <button onclick="performSearch()">Search</button>
+        </div>
+
+        <section class="shortcuts">
+            <h2>Quick Links</h2>
+            <div class="shortcut-buttons">
+                <a href="https://www.google.com" target="_blank">Google</a>
+                <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                <a href="https://www.reddit.com" target="_blank">Reddit</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 PS5 Browse | Made by Acrotap</p>
+    </footer>
+    <script>
+        function goToURL() {
+            const input = document.getElementById('urlInput').value;
+            if (input) {
+                const url = input.startsWith('http') ? input : `https://${input}`;
+                window.location.href = url;
+            } else {
+                alert('Please enter a valid URL.');
+            }
+        }
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            const engine = document.getElementById('searchEngine').value;
+            if (query) {
+                const searchURL = engine + encodeURIComponent(query);
+                window.location.href = searchURL;
+            } else {
+                alert('Please enter a search query.');
+            }
+        }
+    </script>
+</body>
+</html>
+
