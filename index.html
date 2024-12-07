@@ -23,6 +23,7 @@
                 <option value="https://www.bing.com/search?q=">Bing</option>
                 <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
                 <option value="https://www.youtube.com/results?search_query=">YouTube</option>
+                <option value="https://en.wikipedia.org/wiki/Special:Search?search=">Wikipedia</option>
             </select>
             <button onclick="performSearch()">Search</button>
         </div>
@@ -30,11 +31,10 @@
         <section class="shortcuts">
             <h2>Quick Links</h2>
             <div class="shortcut-buttons">
-                <a href="https://www.google.com" target="_blank">Google</a>
-                <a href="https://www.youtube.com" target="_blank">YouTube</a>
-                <a href="https://www.reddit.com" target="_blank">Reddit</a>
-                <a href="https://www.twitter.com" target="_blank">Twitter</a>
-                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.google.com">Google</a>
+                <a href="https://www.youtube.com">YouTube</a>
+                <a href="https://www.reddit.com">Reddit</a>
+                <a href="https://www.twitter.com">Twitter</a>
             </div>
         </section>
     </main>
@@ -46,7 +46,7 @@
             const input = document.getElementById('urlInput').value;
             if (input) {
                 const url = input.startsWith('http') ? input : `https://${input}`;
-                window.location.href = url;
+                window.location.href = url; // Redirect to the URL
             } else {
                 alert('Please enter a valid URL.');
             }
@@ -57,7 +57,7 @@
             const engine = document.getElementById('searchEngine').value;
             if (query) {
                 const searchURL = engine + encodeURIComponent(query);
-                window.location.href = searchURL;
+                window.location.href = searchURL; // Redirect to the search results
             } else {
                 alert('Please enter a search query.');
             }
@@ -65,4 +65,3 @@
     </script>
 </body>
 </html>
-
