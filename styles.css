@@ -16,7 +16,7 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Larger heading */
     margin: 0;
 }
 
@@ -24,9 +24,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Space between elements */
+    gap: 30px; /* More space between elements */
     width: 100%;
-    max-width: 600px;
+    max-width: 800px; /* Increased max width for a bigger page */
 }
 
 .search-container, .search-box {
@@ -37,19 +37,19 @@ main {
 
 .search-container input, .search-box input, .search-box select {
     flex: 1;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.2rem; /* Bigger text */
+    border-radius: 8px; /* Rounded corners */
     border: 1px solid #333;
     background-color: #1f1f1f;
     color: #fff;
 }
 
 .search-container button, .search-box button {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 15px 25px;
+    font-size: 1.2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
@@ -67,22 +67,23 @@ main {
 
 .shortcuts h2 {
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .shortcut-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px; /* Increased spacing between buttons */
 }
 
 .shortcut-buttons a {
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 15px 20px;
+    font-size: 1rem;
     background-color: #333;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -92,9 +93,12 @@ main {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Slightly larger font */
     color: #aaa;
 }
 
+footer p {
+    margin: 0;
+}
